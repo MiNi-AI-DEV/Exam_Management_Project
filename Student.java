@@ -1,3 +1,4 @@
+import java.util.Random;
 public class Student {
 
     private static int idCounter = 1000; // Starting ID for students
@@ -22,7 +23,25 @@ public class Student {
         this.percentage = percentage;
         this.contactNo = contactNo;
         this.registrationId = "STU" + (++idCounter);
-        this.password = password;
+        this.password = generatePassword();
+    }
+
+    private static String generatePassword() {
+
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            +"abcdefghijklmnopqrstuvwxyz"
+                            +"0123456789";
+        String password = "";
+
+        Random random = new Random();
+
+        for (int i=0; i < 8; i++) {
+
+            int index = random.nextInt(characters.length());
+
+            password = password + characters.charAt(index);
+        }
+        return password;    
     }
 
     public String getName() 
