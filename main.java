@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class main {
+
+public class Main {
 
     public static void main(String[] args) {
 
@@ -9,9 +10,7 @@ public class main {
         System.out.println("     EXAM MANAGEMENT SYSTEM");
         System.out.println("=================================");
 
-
-
-        System.out.println("\n---------Student Registration---------");
+        System.out.println("\n---------- STUDENT REGISTRATION ----------");
 
         System.out.print("Enter Student Name: ");
         String name = sc.nextLine();
@@ -19,7 +18,7 @@ public class main {
         System.out.print("Enter Age: ");
         int age = sc.nextInt();
 
-        sc.nextLine(); // Consume the newline character
+        sc.nextLine();
 
         System.out.print("Enter Maximum Qualification: ");
         String qualification = sc.nextLine();
@@ -27,26 +26,39 @@ public class main {
         System.out.print("Enter Percentage: ");
         double percentage = sc.nextDouble();
 
-        sc.nextLine(); // Consume the newline character
-
         System.out.print("Enter Contact Number: ");
         String contactNo = sc.next();
 
+        // Create Student object
         Student student = new Student(
-            name, age, qualification, percentage, contactNo
+                name,
+                age,
+                qualification,
+                percentage,
+                contactNo
         );
 
-        System.out.println("\n======================================");
-        System.out.println        Registration Successfull        ");
-        System.out.println(   "========================================")
+        System.out.println("\n=================================");
+        System.out.println("    REGISTRATION SUCCESSFUL");
+        System.out.println("=================================");
 
-        System.out.println("Name                : " + student.getName());
-        System.out.println("Age                 : " + student.getAge());
-        System.out.println("Qualification       : " + student.getQualification());
-        System.out.println("Percentage          : " + student.getPercentage());
-        System.out.println("Contact Number      : " + student.getContactNo);
+        System.out.println("Name            : " + student.getName());
+        System.out.println("Age             : " + student.getAge());
+        System.out.println("Qualification   : " + student.getQualification());
+        System.out.println("Percentage      : " + student.getPercentage());
+        System.out.println("Contact No      : " + student.getContactNo());
 
-        sc.close();     
-        
+        System.out.println("\nYour Login Details");
+        System.out.println("----------------------------");
+
+        System.out.println("Registration ID : "
+                + student.getRegistrationId());
+
+        System.out.println("Password        : "
+                + student.getPassword());
+
+        System.out.println("\nPlease keep your Registration ID and Password safe.");
+
+        sc.close();
     }
 }
