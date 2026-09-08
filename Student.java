@@ -1,4 +1,7 @@
 public class Student {
+
+    private static int idCounter = 1000; // Starting ID for students
+
     private String name;
     private int age;
     private String qualification;
@@ -18,7 +21,7 @@ public class Student {
         this.qualification = qualification;
         this.percentage = percentage;
         this.contactNo = contactNo;
-        this.registrationId = registrationId;
+        this.registrationId = "STU" + (++idCounter);
         this.password = password;
     }
 
