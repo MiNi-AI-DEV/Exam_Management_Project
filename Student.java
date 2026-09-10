@@ -43,14 +43,15 @@ public class Student {
 
         if (ch >= 'a' && ch <= 'z') {
 
-            ch = (char) (ch + 2);
+            ch = (char) (ch + 3);
 
             if (ch > 'z') {
                 ch = (char) (ch - 26);
             }
+             password = password + ch;
         }
 
-        password = password + ch;
+       
     }
 
     Random random = new Random();
