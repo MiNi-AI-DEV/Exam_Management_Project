@@ -14,4 +14,29 @@ public class Question {
         this.optionD = optionD;
         this.correctAnswer = correctAnswer;
     }  
+     public String getQuestionText() {
+        return questionText;
+    }
+
+    public String getOptionA() {
+        return optionA;
+    }
+
+    public String getOptionB() {
+        return optionB;
+    }
+
+    public String getOptionC() {
+        return optionC;
+    }
+
+    public String getOptionD() {
+        return optionD;
+    }
+
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
 }
+
+
