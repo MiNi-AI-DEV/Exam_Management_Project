@@ -8,42 +8,52 @@ public class main {
         Scanner sc = new Scanner(System.in);
 
         ArrayList<Student> students = new ArrayList<>();
+
         while (true) {
 
-    
-        System.out.println("\n=================================");
-        System.out.println("     EXAM MANAGEMENT SYSTEM");
-        System.out.println("=================================");
+            System.out.println("\n========================================");
+            System.out.println("       EXAM MANAGEMENT SYSTEM");
+            System.out.println("========================================");
 
-        System.out.println("1. Student Registration");
-        System.out.println("2. Student Login");
-        System.out.println("3. Exit");
+            System.out.println("1. Student Registration");
+            System.out.println("2. Student Login");
+            System.out.println("3. Exit");
 
-        System.out.print("\nEnter your choice: ");
-        int choice = sc.nextInt();
+            System.out.print("\nEnter your choice: ");
 
-        sc.nextLine();
+            int choice = sc.nextInt();
 
-        switch (choice) {
-            case 1:
-                registerStudent(sc, students);
-                break;
-            case 2:
-                // Implement student login functionality
-                break;
-            case 3:
-                System.out.println("Thank you for using the Exam Management System.");
-                System.exit(0);
-            default:
-                System.out.println("Invalid choice. Please try again.");
+            sc.nextLine();
+
+            switch (choice) {
+
+                case 1:
+                    registerStudent(sc, students);
+                    break;
+
+                case 2:
+                    loginStudent(sc, students);
+                    break;
+
+                case 3:
+                    System.out.println("\nThank you for using Exam Management System.");
+                    sc.close();
+                    return;
+
+                default:
+                    System.out.println("\nInvalid choice. Please try again.");
+            }
         }
     }
-    }
 
-    //Student Registration
+
+    // Student Registration
     public static void registerStudent(
-        Scanner sc, ArrayList<Student> students)
-    {   
+            Scanner sc,
+            ArrayList<Student> students) {
+
+        System.out.println("\n---------- STUDENT REGISTRATION ----------");
+
         System.out.print("Enter Student Name: ");
         String name = sc.nextLine();
 
@@ -61,7 +71,6 @@ public class main {
         System.out.print("Enter Contact Number: ");
         String contactNo = sc.next();
 
-        // Create Student object
         Student student = new Student(
                 name,
                 age,
@@ -69,6 +78,7 @@ public class main {
                 percentage,
                 contactNo
         );
+
         students.add(student);
 
         System.out.println("\n=================================");
@@ -79,40 +89,46 @@ public class main {
         System.out.println("Registration ID : " + student.getRegistrationId());
         System.out.println("Password        : " + student.getPassword());
 
-       
         System.out.println("\nPlease keep your Registration ID and Password safe.");
-
     }
-}
-public static void loginStudent(Scanner sc, ArrayList<Student> students) {
 
-    System.out.println("\n=================================");
-    System.out.println("         STUDENT LOGIN");
-    System.out.print("Enter Registration ID: ");
-    String registrationId = sc.next();
 
-    System.out.print("Enter Password: ");
-    String password = sc.next();
+    // Student Login
+    public static void loginStudent(
+            Scanner sc,
+            ArrayList<Student> students) {
 
-    boolean loginSuccessful = false;
+        System.out.println("\n---------- STUDENT LOGIN ----------");
 
-    for (Student student : students) {
-        if (student.getRegistrationId().equals(registrationId) &&
-            student.getPassword().equals(password)) {
-            loginSuccessful = true;
-            System.out.println("\n=================================");
+        System.out.print("Enter Registration ID: ");
+        String registrationId = sc.next();
+
+        System.out.print("Enter Password: ");
+        String password = sc.next();
+
+        boolean loginSuccessful = false;
+
+        for (Student student : students) {
+
+            if (student.getRegistrationId().equals(registrationId)
+                    && student.getPassword().equals(password)) {
+
+                loginSuccessful = true;
+
+                System.out.println("\n=================================");
                 System.out.println("       LOGIN SUCCESSFUL");
                 System.out.println("=================================");
 
                 System.out.println("Welcome, " + student.getName() + "!");
-            break;
-        }
-    }
 
-    if (loginSuccessful) {
-        System.out.println("\nLogin Successful!");
-        // Proceed to the next steps after successful login
-    } else {
-        System.out.println("\nInvalid Registration ID or Password. Please try again.");
+                break;
+            }
+        }
+
+        if (!loginSuccessful) {
+
+            System.out.println("\nInvalid Registration ID or Password.");
+            System.out.println("Please try again.");
+        }
     }
 }
