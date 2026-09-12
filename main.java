@@ -127,10 +127,6 @@ public class main {
 
                 System.out.println("Welcome, " + student.getName() + "!");
 
-                //Start Java Exam
-
-                startExam(sc, student);
-
                 break;
             }
         }
@@ -143,4 +139,91 @@ public class main {
     }
 
     //Create 10 questions
+    public static ArrayList<Question> createQuestions() {
+        ArrayList<Question> questions = new ArrayList>();
+
+        questions.add(new Question(
+            "Which keyword is used to inherit a class in Java?",
+            "A. implements",
+            "B. extends",
+            "C. inherits",
+            "D. super",
+            "B"
+        ));
+        questions.add(new Question(
+            "Which method is the starting point of a Java program?",
+            "A. start()",
+            "B. run()",
+            "C. main()",
+            "D. execute()",
+            "C"
+        ));
+        questions.add(new Question(
+            "Which keyword is used to create an object in Java?",
+            "A. class",
+            "B. object",
+            "C. new",
+            "D. create",
+            "C"
+        ));
+        questions.add(new Question(
+            "Which of the following is used to achieve multiple inheritance in Java?",
+            "A. Class",
+            "B. Interface",
+            "C. Constructor",
+            "D. Variable",
+            "B"
+        ));
+        questions.add(new Question(
+            "Which keyword is used to define an interface?",
+            "A. interface",
+            "B. Interface",
+            "C. implements",
+            "D. extends",
+            "A"
+        ));
+        questions.add(new Question(
+            "Which concept allows a method to have the same name with different parameters?",
+            "A. Inheritance",
+            "B. Method Overloading",
+            "C. Encapsulation",
+            "D. Abstraction",
+            "B"
+        ));
+        questions.add(new Question(
+            "Which access specifier allows access only within the same class?",
+            "A. public",
+            "B. protected",
+            "C. private",
+            "D. default",
+            "C"
+        ));
+        questions.add(new Question(
+            "Which keyword is used to call the constructor of the parent class?",
+            "A. this",
+            "B. parent",
+            "C. super",
+            "D. base",
+            "C"
+        ));
+        questions.add(new Question(
+            "Which class is used to represent a sequence of characters in Java?",
+            "A. Character",
+            "B. String",
+            "C. Text",
+            "D. Sequence",
+            "B"
+        
+        ));
+        questions.add(new Question(
+            "What is Dynamic Method Dispatch related to?",
+            "A. Runtime Polymorphism",
+            "B. Compilation",
+            "C. Constructor",
+            "D. Variable",
+            "A"
+    ));
+
+    return questions;
+    }
 }
