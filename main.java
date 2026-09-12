@@ -7,6 +7,8 @@ public class main {
 
         Scanner sc = new Scanner(System.in);
 
+        //Store all register patients
+
         ArrayList<Student> students = new ArrayList<>();
 
         while (true) {
@@ -79,6 +81,8 @@ public class main {
                 contactNo
         );
 
+        //Add students to array list
+
         students.add(student);
 
         System.out.println("\n=================================");
@@ -108,6 +112,8 @@ public class main {
 
         boolean loginSuccessful = false;
 
+        //Search register patients
+
         for (Student student : students) {
 
             if (student.getRegistrationId().equals(registrationId)
@@ -121,6 +127,10 @@ public class main {
 
                 System.out.println("Welcome, " + student.getName() + "!");
 
+                //Start Java Exam
+
+                startExam(sc, student);
+
                 break;
             }
         }
@@ -131,4 +141,6 @@ public class main {
             System.out.println("Please try again.");
         }
     }
+
+    //Create 10 questions
 }
