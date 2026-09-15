@@ -330,7 +330,16 @@ public class Main {
 
             String answer = sc.nextLine().trim().toUpperCase();
 
-            System.out.println("You selected: " + answer);
+            //Check Answer
+
+            if(answer.equals(q.getCorrectAnswer())) {
+                System.out.println("Correct Answer!");
+                correctAnswers++;
+            } else {
+                System.out.println("Incorrect Answer! The correct answer is: " + q.getCorrectAnswer());
+                incorrectAnswers++;
+            }
+
         }
 
 
