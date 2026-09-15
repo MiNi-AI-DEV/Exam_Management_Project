@@ -324,6 +324,8 @@ public class Main {
             System.out.println(q.getOptionC());
             System.out.println(q.getOptionD());
 
+            //Take student answer
+
             System.out.print("\nEnter your answer (A/B/C/D): ");
 
             String answer = sc.nextLine().trim().toUpperCase();
