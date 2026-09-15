@@ -1,14 +1,14 @@
+```java
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class main {
+public class Main {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        //Store all register patients
-
+        // Store all registered students
         ArrayList<Student> students = new ArrayList<>();
 
         while (true) {
@@ -49,7 +49,10 @@ public class main {
     }
 
 
-    // Student Registration
+    // =====================================================
+    // STUDENT REGISTRATION
+    // =====================================================
+
     public static void registerStudent(
             Scanner sc,
             ArrayList<Student> students) {
@@ -81,8 +84,7 @@ public class main {
                 contactNo
         );
 
-        //Add students to array list
-
+        // Add student to ArrayList
         students.add(student);
 
         System.out.println("\n=================================");
@@ -97,7 +99,10 @@ public class main {
     }
 
 
-    // Student Login
+    // =====================================================
+    // STUDENT LOGIN
+    // =====================================================
+
     public static void loginStudent(
             Scanner sc,
             ArrayList<Student> students) {
@@ -110,10 +115,11 @@ public class main {
         System.out.print("Enter Password: ");
         String password = sc.next();
 
+        sc.nextLine();
+
         boolean loginSuccessful = false;
 
-        //Search register patients
-
+        // Search registered students
         for (Student student : students) {
 
             if (student.getRegistrationId().equals(registrationId)
@@ -127,6 +133,9 @@ public class main {
 
                 System.out.println("Welcome, " + student.getName() + "!");
 
+                // Start exam
+                startExam(sc, student);
+
                 break;
             }
         }
@@ -138,92 +147,189 @@ public class main {
         }
     }
 
-    //Create 10 questions
+
+    // =====================================================
+    // CREATE 10 QUESTIONS
+    // =====================================================
+
     public static ArrayList<Question> createQuestions() {
-        ArrayList<Question> questions = new ArrayList>();
 
-        questions.add(new Question(
-            "Which keyword is used to inherit a class in Java?",
-            "A. implements",
-            "B. extends",
-            "C. inherits",
-            "D. super",
-            "B"
-        ));
-        questions.add(new Question(
-            "Which method is the starting point of a Java program?",
-            "A. start()",
-            "B. run()",
-            "C. main()",
-            "D. execute()",
-            "C"
-        ));
-        questions.add(new Question(
-            "Which keyword is used to create an object in Java?",
-            "A. class",
-            "B. object",
-            "C. new",
-            "D. create",
-            "C"
-        ));
-        questions.add(new Question(
-            "Which of the following is used to achieve multiple inheritance in Java?",
-            "A. Class",
-            "B. Interface",
-            "C. Constructor",
-            "D. Variable",
-            "B"
-        ));
-        questions.add(new Question(
-            "Which keyword is used to define an interface?",
-            "A. interface",
-            "B. Interface",
-            "C. implements",
-            "D. extends",
-            "A"
-        ));
-        questions.add(new Question(
-            "Which concept allows a method to have the same name with different parameters?",
-            "A. Inheritance",
-            "B. Method Overloading",
-            "C. Encapsulation",
-            "D. Abstraction",
-            "B"
-        ));
-        questions.add(new Question(
-            "Which access specifier allows access only within the same class?",
-            "A. public",
-            "B. protected",
-            "C. private",
-            "D. default",
-            "C"
-        ));
-        questions.add(new Question(
-            "Which keyword is used to call the constructor of the parent class?",
-            "A. this",
-            "B. parent",
-            "C. super",
-            "D. base",
-            "C"
-        ));
-        questions.add(new Question(
-            "Which class is used to represent a sequence of characters in Java?",
-            "A. Character",
-            "B. String",
-            "C. Text",
-            "D. Sequence",
-            "B"
-        
-        ));
-        questions.add(new Question(
-            "What is Dynamic Method Dispatch related to?",
-            "A. Runtime Polymorphism",
-            "B. Compilation",
-            "C. Constructor",
-            "D. Variable",
-            "A"
-    ));
+        ArrayList<Question> questions = new ArrayList<>();
 
-    return questions;
+
+        // Question 1
+        questions.add(new Question(
+                "Which keyword is used to inherit a class in Java?",
+                "A. implements",
+                "B. extends",
+                "C. inherits",
+                "D. super",
+                "B"
+        ));
+
+
+        // Question 2
+        questions.add(new Question(
+                "Which method is the starting point of a Java program?",
+                "A. start()",
+                "B. run()",
+                "C. main()",
+                "D. execute()",
+                "C"
+        ));
+
+
+        // Question 3
+        questions.add(new Question(
+                "Which keyword is used to create an object in Java?",
+                "A. class",
+                "B. object",
+                "C. new",
+                "D. create",
+                "C"
+        ));
+
+
+        // Question 4
+        questions.add(new Question(
+                "Which of the following is used to achieve multiple inheritance in Java?",
+                "A. Class",
+                "B. Interface",
+                "C. Constructor",
+                "D. Variable",
+                "B"
+        ));
+
+
+        // Question 5
+        questions.add(new Question(
+                "Which keyword is used to define an interface?",
+                "A. interface",
+                "B. Interface",
+                "C. implements",
+                "D. extends",
+                "A"
+        ));
+
+
+        // Question 6
+        questions.add(new Question(
+                "Which concept allows a method to have the same name with different parameters?",
+                "A. Inheritance",
+                "B. Method Overloading",
+                "C. Encapsulation",
+                "D. Abstraction",
+                "B"
+        ));
+
+
+        // Question 7
+        questions.add(new Question(
+                "Which access specifier allows access only within the same class?",
+                "A. public",
+                "B. protected",
+                "C. private",
+                "D. default",
+                "C"
+        ));
+
+
+        // Question 8
+        questions.add(new Question(
+                "Which keyword is used to call the constructor of the parent class?",
+                "A. this",
+                "B. parent",
+                "C. super",
+                "D. base",
+                "C"
+        ));
+
+
+        // Question 9
+        questions.add(new Question(
+                "Which class is used to represent a sequence of characters in Java?",
+                "A. Character",
+                "B. String",
+                "C. Text",
+                "D. Sequence",
+                "B"
+        ));
+
+
+        // Question 10
+        questions.add(new Question(
+                "What is Dynamic Method Dispatch related to?",
+                "A. Runtime Polymorphism",
+                "B. Compilation",
+                "C. Constructor",
+                "D. Variable",
+                "A"
+        ));
+
+
+        // Return all questions
+        return questions;
+    }
+
+
+    // =====================================================
+    // START EXAM
+    // =====================================================
+
+    public static void startExam(
+            Scanner sc,
+            Student student) {
+
+        // Get all 10 questions
+        ArrayList<Question> questions = createQuestions();
+
+        System.out.println("\n========================================");
+        System.out.println("          JAVA ONLINE EXAM");
+        System.out.println("========================================");
+
+        System.out.println("Student Name     : " + student.getName());
+        System.out.println("Registration ID  : " + student.getRegistrationId());
+
+        System.out.println("\nTotal Questions  : " + questions.size());
+
+        System.out.println("\nPlease Press Enter To Start The Exam...");
+
+        sc.nextLine();
+
+
+        // Display questions one by one
+        for (int i = 0; i < questions.size(); i++) {
+
+            Question q = questions.get(i);
+
+            System.out.println("\n----------------------------------------");
+
+            System.out.println(
+                    "Question " + (i + 1)
+                    + " of "
+                    + questions.size()
+            );
+
+            System.out.println("----------------------------------------");
+
+            System.out.println(q.getQuestionText());
+
+            System.out.println(q.getOptionA());
+            System.out.println(q.getOptionB());
+            System.out.println(q.getOptionC());
+            System.out.println(q.getOptionD());
+
+            System.out.print("\nEnter your answer (A/B/C/D): ");
+
+            String answer = sc.nextLine().trim().toUpperCase();
+
+            System.out.println("You selected: " + answer);
+        }
+
+
+        // Exam completed
+        System.out.println("\n========================================");
+        System.out.println("          EXAM COMPLETED");
+        System.out.println("========================================");
     }
 }
