@@ -282,6 +282,12 @@ public class Main {
         // Get all 10 questions
         ArrayList<Question> questions = createQuestions();
 
+        //Variable to store the score
+        int correctAnswers = 0;
+        int incorrectAnswers = 0;
+
+        //Exam Information
+
         System.out.println("\n========================================");
         System.out.println("          JAVA ONLINE EXAM");
         System.out.println("========================================");
