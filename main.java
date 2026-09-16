@@ -342,7 +342,7 @@ public class Main {
 
                 incorrectAnswers++;
 
-                System.out.println("Incorrect Answer! ")
+                System.out.println("Incorrect Answer! ");
                 System.out.println("The correct answer is: " + q.getCorrectAnswer());
                 
             }
@@ -353,8 +353,29 @@ public class Main {
         System.out.println("\n========================================");
         System.out.println("          EXAM COMPLETED");
         System.out.println("========================================");
-    }
-}
+    
 
-//Calculate Percentage
+
+        //Calculate Percentage
+        int totalQuestions = questions.size();
+
+        double percentage = (correctAnswers * 100.0)/ totalQuestions;
+
+        //Calculate Grade
+        String grade;
+
+        if (percentage >= 90) {
+            grade = "A+";
+        } else if (percentage >= 80) {
+            grade = "A";
+        } else if (percentage >= 70) {
+            grade = "B";
+        } else if (percentage >= 60) {
+            grade = "C";
+        } else if (percentage >= 50) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
 
