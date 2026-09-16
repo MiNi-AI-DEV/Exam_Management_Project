@@ -328,20 +328,26 @@ public class Main {
 
             System.out.print("\nEnter your answer (A/B/C/D): ");
 
-            String answer = sc.nextLine().trim().toUpperCase();
+            String answer = sc.nextLine().trim().toUpperCase(); 
 
             //Check Answer
 
             if(answer.equals(q.getCorrectAnswer())) {
-                System.out.println("Correct Answer!");
+
                 correctAnswers++;
+
+                System.out.println("Correct Answer!");
+                
             } else {
-                System.out.println("Incorrect Answer! The correct answer is: " + q.getCorrectAnswer());
+
                 incorrectAnswers++;
+
+                System.out.println("Incorrect Answer! ")
+                System.out.println("The correct answer is: " + q.getCorrectAnswer());
+                
             }
 
         }
-
 
         // Exam completed
         System.out.println("\n========================================");
@@ -349,3 +355,6 @@ public class Main {
         System.out.println("========================================");
     }
 }
+
+//Calculate Percentage
+
