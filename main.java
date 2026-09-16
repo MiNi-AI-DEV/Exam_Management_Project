@@ -377,5 +377,53 @@ public class Main {
         } else {
             grade = "F";
         }
+        
+        //Calculate Pass Fail
+
+        String status;
+
+        if (percentage >= 40) {
+            status = "PASS";
+        } else {
+            status = "FAIL";
+        }
+        //Final Exam Report
+
+        System.out.println("\n\n========================================");
+        System.out.println("                    EXAM REPORT");
+        System.out.println("========================================");
+
+        System.out.println("Student Name : " + student.getName());
+        System.out.println("Registration ID : " + student.getRegistrationId());
+
+        System.out.println("----------------------------------------");
+
+        System.out.println("Total Questions : " + totalQuestions);
+        System.out.println("Correct Answers : " + correctAnswers);
+        System.out.println("Incorrect Answers : " + incorrectAnswers);
+
+
+        System.out.println("----------------------------------------");
+
+        System.out.printf( "Percentage : %.2f%%\n", percentage );
+
+        System.out.println("Grade : " + grade);
+        System.out.println("Result : " + status);
+
+        System.out.println("========================================");
+
+        System.out.println("\nThank you for attending the Java exam.");
+
+    }
+
+}
+
+}
+
+
+
+
+
+
 
 
