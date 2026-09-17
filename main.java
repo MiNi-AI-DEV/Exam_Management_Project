@@ -324,13 +324,23 @@ public class Main {
             System.out.println(q.getOptionC());
             System.out.println(q.getOptionD());
 
-            //Take student answer
+            //Take valid student answer
 
-            System.out.print("\nEnter your answer (A/B/C/D): ");
+            String answer;
+            while (true) {
+                System.out.print("\nEnter your answer (A/B/C/D): ");
+                answer = sc.nextLine().trim().toUpperCase();
 
-            String answer = sc.nextLine().trim().toUpperCase(); 
+                //Check wheather the answer is A, B, C or D
 
-            //Check Answer
+                if (answer.equals("A") || answer.equals("B") || answer.equals("C") || answer.equals("D")) {
+                    break;
+                } else {
+                    System.out.println("Invalid input. Please enter A, B, C, or D.");
+                }
+            }
+
+            // Check whether answer is A, B, C or D
 
             if(answer.equals(q.getCorrectAnswer())) {
 
