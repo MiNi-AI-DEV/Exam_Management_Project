@@ -340,8 +340,8 @@ public class Main {
                 }
             }
 
-            // Check whether answer is A, B, C or D
-
+            // Check answer
+            
             if(answer.equals(q.getCorrectAnswer())) {
 
                 correctAnswers++;
