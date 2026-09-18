@@ -87,6 +87,7 @@ public class Main {
 
         // Add student to ArrayList
         students.add(student);
+        saveStudent(student);
 
         System.out.println("\n=================================");
         System.out.println("    REGISTRATION SUCCESSFUL");
@@ -431,7 +432,7 @@ public class Main {
 }
 //Save Student Registration Details
 
-public static void saveStudentDetails(Student student) {
+public static void saveStudent(Student student) {
     try {
         FileWriter writer = new FileWriter("students.csv", true);
         writer.write(student.getRegistrationId() + "," +
@@ -441,6 +442,9 @@ public static void saveStudentDetails(Student student) {
                 student.getPercentage() + "," +
                 student.getContactNo() + "\n");
         writer.close();
+
+        System.out.println("Student registration details saved successfully.");
+
     } catch (IOException e) {
         System.out.println("An error occurred while saving student details."+ e.getMessage());
     }
