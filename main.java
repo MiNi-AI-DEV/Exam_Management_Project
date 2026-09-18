@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
 
@@ -426,6 +428,22 @@ public class Main {
 
     }
 
+}
+//Save Student Registration Details
+
+public static void saveStudentDetails(Student student) {
+    try {
+        FileWriter writer = new FileWriter("students.csv", true);
+        writer.write(student.getRegistrationId() + "," +
+                student.getName() + "," +
+                student.getAge() + "," +
+                student.getQualification() + "," +
+                student.getPercentage() + "," +
+                student.getContactNo() + "\n");
+        writer.close();
+    } catch (IOException e) {
+        System.out.println("An error occurred while saving student details."+ e.getMessage());
+    }
 }
 
 
