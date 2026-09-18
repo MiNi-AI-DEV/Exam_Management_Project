@@ -429,24 +429,23 @@ public class Main {
 
     }
 
-}
-//Save Student Registration Details
+    //Save Student Registration Details
+    public static void saveStudent(Student student) {
+        try {
+            FileWriter writer = new FileWriter("students.csv", true);
+            writer.write(student.getRegistrationId() + "," +
+                    student.getName() + "," +
+                    student.getAge() + "," +
+                    student.getQualification() + "," +
+                    student.getPercentage() + "," +
+                    student.getContactNo() + "\n");
+            writer.close();
 
-public static void saveStudent(Student student) {
-    try {
-        FileWriter writer = new FileWriter("students.csv", true);
-        writer.write(student.getRegistrationId() + "," +
-                student.getName() + "," +
-                student.getAge() + "," +
-                student.getQualification() + "," +
-                student.getPercentage() + "," +
-                student.getContactNo() + "\n");
-        writer.close();
+            System.out.println("Student registration details saved successfully.");
 
-        System.out.println("Student registration details saved successfully.");
-
-    } catch (IOException e) {
-        System.out.println("An error occurred while saving student details."+ e.getMessage());
+        } catch (IOException e) {
+            System.out.println("An error occurred while saving student details." + e.getMessage());
+        }
     }
 }
 
