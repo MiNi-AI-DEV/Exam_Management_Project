@@ -448,6 +448,22 @@ public class Main {
         }
     }
 }
+//Save student-wise exam report
+
+public static void saveExamReport(
+    Student student,
+    int totalQuestions,
+    int correctAnswers,
+    int incorrectAnswers,
+    double percentage,
+    String grade,
+    String status){
+        try {
+            FileWriter writer = new FileWriter("exam_reports.csv", true);
+
+            
+    }
+)
 
 
 
