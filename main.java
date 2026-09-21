@@ -427,8 +427,6 @@ public class Main {
 
         //Save the final exam report to a CSV file
 
-        saveExamReport(student, totalQuestions, correctAnswers, incorrectAnswers, percentage, grade, status);
-
         System.out.println("\nThank you for attending the Java exam.");
 
         saveExamReport(student, totalQuestions, correctAnswers, incorrectAnswers, percentage, grade, status);
@@ -436,18 +434,22 @@ public class Main {
 
     // Save Student Registration Details
     public static void saveStudent(Student student) {
-        try (FileWriter writer = new FileWriter("students.csv", true)) {
+        try (FileWriter writer = new FileWriter("students.csv", true)) 
+        {
             writer.write(student.getRegistrationId() + "," +
                     student.getName() + "," +
                     student.getAge() + "," +
                     student.getQualification() + "," +
                     student.getPercentage() + "," +
-                    student.getContactNo() + "\n");
+                    student.getContactNo() + "," +
+                    student.getPassword() +
+                    "\n");
 
             System.out.println("Student registration details saved successfully.");
-        } catch (IOException e) {
+        } catch (IOException e) 
+        {
             System.out.println("An error occurred while saving student details. " + e.getMessage());
-        }
+        }   
     }
 
     // Save a student-wise exam report
