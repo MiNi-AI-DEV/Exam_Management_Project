@@ -429,47 +429,46 @@ public class Main {
 
     }
 
-    //Save Student Registration Details
+    // Save Student Registration Details
     public static void saveStudent(Student student) {
-        try {
-            FileWriter writer = new FileWriter("students.csv", true);
+        try (FileWriter writer = new FileWriter("students.csv", true)) {
             writer.write(student.getRegistrationId() + "," +
                     student.getName() + "," +
                     student.getAge() + "," +
                     student.getQualification() + "," +
                     student.getPercentage() + "," +
                     student.getContactNo() + "\n");
-            writer.close();
 
             System.out.println("Student registration details saved successfully.");
-
         } catch (IOException e) {
-            System.out.println("An error occurred while saving student details." + e.getMessage());
+            System.out.println("An error occurred while saving student details. " + e.getMessage());
+        }
+    }
+
+    // Save student-wise exam report
+    public static void saveExamReport(
+            Student student,
+            int totalQuestions,
+            int correctAnswers,
+            int incorrectAnswers,
+            double percentage,
+            String grade,
+            String status) {
+        try (FileWriter writer = new FileWriter("exam_reports.csv", true)) {
+            writer.write(student.getRegistrationId() + "," +
+                    student.getName() + "," +
+                    totalQuestions + "," +
+                    correctAnswers + "," +
+                    incorrectAnswers + "," +
+                    String.format("%.2f", percentage) + "," +
+                    grade + "," +
+                    status + "\n");
+
+            System.out.println("Exam report saved successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while saving exam report. " + e.getMessage());
         }
     }
 }
-//Save student-wise exam report
-
-public static void saveExamReport(
-    Student student,
-    int totalQuestions,
-    int correctAnswers,
-    int incorrectAnswers,
-    double percentage,
-    String grade,
-    String status){
-        try {
-            FileWriter writer = new FileWriter("exam_reports.csv", true);
-
-            
-    }
-)
-
-
-
-
-
-
-
 
 
