@@ -425,8 +425,13 @@ public class Main {
 
         System.out.println("========================================");
 
+        //Save the final exam report to a CSV file
+
+        saveExamReport(student, totalQuestions, correctAnswers, incorrectAnswers, percentage, grade, status);
+
         System.out.println("\nThank you for attending the Java exam.");
 
+        saveExamReport(student, totalQuestions, correctAnswers, incorrectAnswers, percentage, grade, status);
     }
 
     // Save Student Registration Details
@@ -445,7 +450,7 @@ public class Main {
         }
     }
 
-    // Save student-wise exam report
+    // Save a student-wise exam report
     public static void saveExamReport(
             Student student,
             int totalQuestions,
