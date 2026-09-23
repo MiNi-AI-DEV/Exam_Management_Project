@@ -29,3 +29,35 @@ Exception Handling
 File Handling
 CSV data storage
 Object-Oriented Programming
+
+2. Main Features
+Student Registration
+
+The student enters:
+
+Student Name
+Age
+Maximum Qualification
+Percentage
+Contact Number
+
+The system automatically generates:
+
+Registration ID
+Password
+
+The student information is stored in an ArrayList.
+
+The registration information is also saved into:
+
+students.csv
+Student Login
+
+The student provides:
+
+Registration ID
+Password
+
+The system searches the registered students stored in the ArrayList.
+
+If both values match, login is successful and the student can start the examination.
