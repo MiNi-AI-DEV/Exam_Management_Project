@@ -61,3 +61,53 @@ Password
 The system searches the registered students stored in the ArrayList.
 
 If both values match, login is successful and the student can start the examination.
+
+Java Online Examination:
+
+The system contains 10 Java MCQ questions.
+
+Each question contains:
+
+Question
+Option A
+Option B
+Option C
+Option D
+Correct Answer
+
+The student must enter:
+
+A
+B
+C
+D
+
+Invalid answers are rejected until the student enters a valid option.
+
+Automatic Result Calculation:
+
+After completing all questions, the application calculates:
+
+Total Questions
+Correct Answers
+Incorrect Answers
+Percentage
+Grade
+Pass/Fail Result
+
+Exam Report Storage:
+
+After the examination, the student-wise result is saved in:
+
+exam_reports.csv
+
+The report stores:
+
+Registration ID
+Student Name
+Total Questions
+Correct Answers
+Incorrect Answers
+Percentage
+Grade
+Result
