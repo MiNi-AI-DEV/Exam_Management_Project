@@ -35,13 +35,7 @@ Because Main is a public class, Java requires the source file to be named Main.j
 
 PART 6 — main() Method
 
-Your code:
-
 public static void main(String[] args) {
-
-This is extremely important for your interview.
-
-Let's break it down.
 
 public
 public
