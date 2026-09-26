@@ -35,7 +35,7 @@ Because Main is a public class, Java requires the source file to be named Main.j
 
 PART 6 — main() Method
 
-public static void main(String[] args) {
+public static void main(String[] args) 
 
 public
 public
@@ -68,17 +68,12 @@ String[] args
 
 This allows command-line arguments to be passed to the program.
 
-Interview question
-
-Interviewer: Why is main() static?
-
-Answer:
+ Why is main() static?
 
 The JVM calls the main method to start the application. Making it static allows the JVM to invoke it without creating an object of the Main class.
 
 PART 7 — Scanner Object
 
-Your code:
 
 Scanner sc = new Scanner(System.in);
 
@@ -96,7 +91,6 @@ The reference variable.
 
 Creates a Scanner object.
 
-So you can think:
 
 Scanner
    ↓
@@ -111,13 +105,7 @@ new Scanner(System.in)
 Object
 PART 8 — ArrayList of Students
 
-Your code:
-
 ArrayList<Student> students = new ArrayList<>();
-
-This is one of the most important lines in your project.
-
-Let's break it down.
 
 ArrayList
 
@@ -155,9 +143,7 @@ students
  └── Student object 3
 PART 9 — Infinite Menu Loop
 
-Your code:
-
-while (true) {
+while (true) 
 
 This creates a loop that continues indefinitely.
 
