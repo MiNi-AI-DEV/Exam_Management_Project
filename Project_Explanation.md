@@ -30,7 +30,6 @@ PART 5 — Main Class
 
 For a public class, the Java filename must match the class name:
 
-
 Because Main is a public class, Java requires the source file to be named Main.java.
 
 PART 6 — main() Method
@@ -163,17 +162,13 @@ return;
 
 inside case 3.
 
-Interview question
-
-Why did you use while(true)?
+Why did use while(true)?
 
 Answer:
 
 I used while(true) because the application menu should continue running until the user explicitly selects the Exit option. The return statement terminates the main method and therefore the application.
 
 PART 10 — Menu Display
-
-Your code contains:
 
 System.out.println("1. Student Registration");
 System.out.println("2. Student Login");
