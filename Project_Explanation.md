@@ -30,11 +30,6 @@ PART 5 — Main Class
 
 For a public class, the Java filename must match the class name:
 
-Main.java
-
-This is something your interviewer could absolutely ask.
-
-Interview answer
 
 Because Main is a public class, Java requires the source file to be named Main.java.
 
