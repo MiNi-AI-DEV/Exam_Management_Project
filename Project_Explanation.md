@@ -208,8 +208,6 @@ you have:
 
 sc.nextLine();
 
-This is an important interview concept.
-
 nextInt() reads the integer but leaves the newline character in the input buffer.
 
 Then nextLine() consumes that leftover newline.
@@ -220,15 +218,12 @@ sc.nextLine()
 
 for a name, Java could read the leftover newline instead of waiting for the user's name.
 
-Interview question
-
 Why did you use nextLine() after nextInt()?
 
 Answer:
 
 nextInt() reads only the integer and leaves the newline character in the input buffer. I use nextLine() to consume that newline before reading the next line-based String input.
 
-This is a very common Java interview question.
 
 PART 13 — switch
 
