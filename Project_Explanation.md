@@ -413,20 +413,15 @@ rather than only whole numbers.
 
 PART 23 — Contact Number
 String contactNo = sc.next();
+ the contact number as a String.
 
-You deliberately store the contact number as a String.
-
-This is actually a good interview discussion point.
-
-A phone number is not something you perform mathematical calculations on.
+A phone number is not something that perform mathematical calculations on.
 
 Also, phone numbers can potentially begin with zero.
 
 So storing it as String is appropriate.
 
 PART 24 — Creating Student Object
-
-Your code:
 
 Student student = new Student(
         name,
