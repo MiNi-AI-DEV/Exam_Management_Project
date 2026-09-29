@@ -585,8 +585,6 @@ instead of:
 
 for String content comparison.
 
-Interview answer:
-
 In Java, equals() is used to compare the actual content of String objects, whereas == compares references.
 
 PART 34 — Start Exam
