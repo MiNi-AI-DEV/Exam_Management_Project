@@ -941,7 +941,7 @@ if (percentage >= 40) {
     status = "FAIL";
 }
 
-So your project has a separate grading system and pass/fail rule.
+So the project has a separate grading system and pass/fail rule.
 
 For example:
 
