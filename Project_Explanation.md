@@ -875,7 +875,7 @@ is displayed.
 
 PART 52 — Checking Correct Answer
 
-Your code:
+code:
 
 if (answer.equals(q.getCorrectAnswer()))
 
