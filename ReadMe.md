@@ -256,6 +256,7 @@ Scanner sc = new Scanner(System.in);
 
 Scanner is used to accept input from the keyboard.
 
+
 Examples:
 
 sc.nextLine();
