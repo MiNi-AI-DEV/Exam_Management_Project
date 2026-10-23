@@ -8,6 +8,7 @@ Student registration details and exam reports are saved in CSV files for record 
 
 1. Project Objective
 
+
 The main objective of this project is to develop a simple console-based examination system using Java.
 
 The application demonstrates practical usage of:
