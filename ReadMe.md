@@ -34,6 +34,7 @@ CSV data storage
 Object-Oriented Programming
 
 2. Main Features
+
 Student Registration
 
 The student enters:
