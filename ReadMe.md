@@ -14,6 +14,7 @@ The main objective of this project is to develop a simple console-based examinat
 
 The application demonstrates practical usage of:
 
+
 Java Classes and Objects
 Encapsulation
 Constructors
