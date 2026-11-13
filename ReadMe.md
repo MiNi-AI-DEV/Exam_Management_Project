@@ -61,6 +61,7 @@ Student Login
 The student provides:
 
 Registration ID
+
 Password
 
 The system searches the registered students stored in the ArrayList.
