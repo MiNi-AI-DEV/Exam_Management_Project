@@ -48,6 +48,7 @@ Contact Number
 The system automatically generates:
 
 Registration ID
+
 Password
 
 The student information is stored in an ArrayList.
